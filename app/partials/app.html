@@ -1,0 +1,21 @@
+<h1>Angular Reading List</h1>
+
+<div class='row' ng-controller='ReadingListController as readingListCtrl'>
+  <button class='btn btn-default'>Create Review</button>
+  <hr />
+  <hr />
+
+  <ul class='list-unstyled co-sm-8'>
+    <li class='book row' ng-repeat='book in readingListCtrl.books'>
+      <aside class='col-sm-1'>
+        <book-cover></book-cover>
+        <p class='goodRating rating'>{{book.rating}}/5</p>
+      </aside>
+      <div class='col-sm-9'>
+        <cite class='text-muted'>Written by {{book.author}}</cite>
+        <p>{{book.review}}</p>
+        <book-genres></book-genres>
+      </div>
+    </li>
+  </ul>
+</div>
